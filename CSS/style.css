@@ -7,8 +7,8 @@ html {
 }
 body {
     font-size: 1.6rem;
-    background: rgba(0,0,0,0.5) url("../image/Shootingstar.jpg");
     background-blend-mode: darken;
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -32,7 +32,7 @@ img {
     font-size: 60px;
     line-height: 30px;
 }
-.cuenta {
+#cuenta {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -40,10 +40,10 @@ img {
     gap: 20px;
     text-align: center;
 }
-.simply-word {
+.tiempo{
     font-size: 20px;
 }
-.simply-amount {
+.cajaNumero {
     display: block;
     padding: 1.5rem 0;
     border: 2px solid black;
@@ -55,7 +55,7 @@ img {
     height: 65px;
 }
 @media (max-width: 800px) {
-    .simply-amount {
+    .cajaNumero {
         padding: 1.5rem 0;
         width: 70px;
     }
