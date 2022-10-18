@@ -1,7 +1,14 @@
 let botonMas = document.querySelector('.mas');
 let botonMenos = document.querySelector('.menos');
+let contadorMas = 0;
+let contadorMenos = 0;
+let botones = document.querySelector('.temporizador__botones');
+
+let ClickMas = document.querySelector('.contadorMas');
+let ClickMenos = document.querySelector('.contadorMenos');
+
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 13, 2022 15:37:25");
+var countDownDate = new Date("Oct 18, 2022 17:37:25");
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -44,15 +51,51 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("cuenta").innerHTML = "Tiempo terminado";
+    botones.style.display = "none"
+    document.getElementById("cuenta").innerHTML = `<video src="image/Loading.mp4" autoplay loop></video>`;
   }
 }, 1000);
 
-botonMas.onclick = sumarDia;
-botonMenos.onclick = restarDia;
+botonMas.addEventListener('click', function() {
+  sumarHora()
+})
+botonMenos.addEventListener('click', function() {
+  restarHora()
+
+})
+
+// Horas
+function sumarHora() {
+  countDownDate.setHours(countDownDate.getHours() + 1);
+  contadorMas ++;
+  ClickMas.innerHTML = contadorMas;
+}
+function restarHora() {
+  countDownDate.setHours(countDownDate.getHours() - 1);
+  contadorMenos++;
+  ClickMenos.innerHTML = contadorMenos;
+}
+
+// Minutos
+function sumarMinutos() {
+countDownDate.setMinutes(countDownDate.getMinutes() + 1);
+}
+function restarMinutos() {
+countDownDate.setMinutes(countDownDate.getMinutes() - 1);
+}
+
+// Dias
 function sumarDia() {
-        countDownDate.setDate(countDownDate.getDate() + 1);
+  countDownDate.setDate(countDownDate.getDate() + 1);
 }
 function restarDia() {
-  countDownDate.setDate(countDownDate.getDate() - 1);
+countDownDate.setDate(countDownDate.getDate() - 1);
+}
+
+// Segundos
+function sumarSegundos() {
+countDownDate.setSeconds(countDownDate.getSeconds() + 1);
+}
+function restarSegundos() {
+countDownDate.setSeconds(countDownDate.getSeconds() - 1);
 }
