@@ -52,7 +52,8 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     botones.style.display = "none"
-    document.getElementById("cuenta").innerHTML = `<video src="image/Loading.mp4" autoplay loop></video>`;
+    document.getElementById("cuenta").innerHTML = `<div class="cajaEncuesta"><p class="encuesta">Esto fue un experimento social, queremos hacerte unas preguntas</p>
+    <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfnKhKAIrpgZbxFmyZ3gsW-VLC8LafzJ53qovx5hTV3WfXAmQ/formrestricted" target="_blank"> Acceder a la encuesta</a></div>`;
   }
 }, 1000);
 

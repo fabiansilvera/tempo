@@ -29,7 +29,7 @@ img {
     margin: 10% auto;
 }
 .temporizador__titulo {
-    font-size: 60px;
+    font-size: 50px;
     line-height: 30px;
 }
 #cuenta {
@@ -84,4 +84,16 @@ img {
 }
 .cajaContador {
     text-align: center;
+}
+.cajaEncuesta {
+    display: flex;
+    flex-direction: column;
+}
+.encuesta {
+    font-size: 3rem;
+}
+.link {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #551A8B;
 }
