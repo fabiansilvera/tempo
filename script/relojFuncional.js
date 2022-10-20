@@ -8,7 +8,7 @@ let ClickMas = document.querySelector('.contadorMas');
 let ClickMenos = document.querySelector('.contadorMenos');
 
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 18, 2022 17:37:25");
+var countDownDate = new Date("Oct 22, 2022 17:37:25");
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -52,8 +52,9 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     botones.style.display = "none"
-    document.getElementById("cuenta").innerHTML = `<div class="cajaEncuesta"><p class="encuesta">Esto fue un experimento social, queremos hacerte unas preguntas</p>
-    <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfnKhKAIrpgZbxFmyZ3gsW-VLC8LafzJ53qovx5hTV3WfXAmQ/formrestricted" target="_blank"> Acceder a la encuesta</a></div>`;
+    document.getElementById("cuenta").style.display = "none"
+    document.querySelector(".temporizador__titulo").innerHTML = `
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnKhKAIrpgZbxFmyZ3gsW-VLC8LafzJ53qovx5hTV3WfXAmQ/formrestricted" target="_blank"><h1 class="temporizador__titulo link">Proyecto Destiempo</h2></a>`;
   }
 }, 1000);
 
