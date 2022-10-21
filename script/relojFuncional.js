@@ -8,7 +8,7 @@ let ClickMas = document.querySelector('.contadorMas');
 let ClickMenos = document.querySelector('.contadorMenos');
 
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 22, 2022 17:37:25");
+var countDownDate = new Date("Oct 21, 2022 10:37:25");
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -59,10 +59,10 @@ var x = setInterval(function() {
 }, 1000);
 
 botonMas.addEventListener('click', function() {
-  sumarHora()
+  sumarSegundos()
 })
 botonMenos.addEventListener('click', function() {
-  restarHora()
+  restarSegundos()
 
 })
 
