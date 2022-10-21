@@ -60,22 +60,21 @@ var x = setInterval(function() {
 
 botonMas.addEventListener('click', function() {
   sumarSegundos()
+  contadorMas ++;
+  ClickMas.innerHTML = contadorMas;
 })
 botonMenos.addEventListener('click', function() {
   restarSegundos()
-
+  contadorMenos++;
+  ClickMenos.innerHTML = contadorMenos;
 })
 
 // Horas
 function sumarHora() {
   countDownDate.setHours(countDownDate.getHours() + 1);
-  contadorMas ++;
-  ClickMas.innerHTML = contadorMas;
 }
 function restarHora() {
   countDownDate.setHours(countDownDate.getHours() - 1);
-  contadorMenos++;
-  ClickMenos.innerHTML = contadorMenos;
 }
 
 // Minutos
